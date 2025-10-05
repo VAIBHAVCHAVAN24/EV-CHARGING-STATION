@@ -67,7 +67,7 @@ body {
 
 /* Header */
 .header-section {
-background-image: url(esp32/electric-vehicle-charging-management-system-2.png);
+background-image: url(images/electric-vehicle-charging-management-system-2.png);
 background-size: cover;
 color: white;
 }
@@ -108,7 +108,7 @@ color: white;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(esp32/car.png);
+  background-image: url(images/car.png);
  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -191,7 +191,7 @@ color: white;
 
 /*payment section*/
 #payment{
-  background-image:url(esp32/Glowing\ Neon\ Lines\ in\ Dark\ Space.png);
+  background-image:url(images/Glowing\ Neon\ Lines\ in\ Dark\ Space.png);
 }
 #qrcode {
   display: flex;
@@ -203,7 +203,7 @@ color: white;
   padding: 50px;
   text-align: center;
   min-height: 85vh;
-  background-image: url(esp32/path.png);
+  background-image: url(images/path.png);
 }
 
 .contact h2 {
@@ -267,3 +267,4 @@ color: white;
   background-color: #145044;
   color: white;
 }
+
