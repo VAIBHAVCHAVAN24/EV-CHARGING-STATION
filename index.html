@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EV Charging Station</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<header>
+<div class="nav-section">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#estimator">Estimator</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#payment">Payment</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+  <!-- Header Section -->
+  <div id="header" class="header-section full-section">
+    <div class="header-container">
+      <div class="header-text">
+        <h2>Welcome to EV Charging Station</h2>
+        <p>Start charging your electric vehicle easily and quickly.</p>
+        <div class="header-buttons">
+          <a href="#estimator" class="start-Btn">Tap to Continue</a>
+        </div>
+      </div>
+     
+  </div>
+</header>
+
+
+<!-- Estimator Section -->
+  <section id="estimator" class="estimator-container">
+  <div class="estimator-card">
+    <h2>EV Charging Estimator</h2>
+ 
+    <input type="text" name="suggestion" list="suggestion"  placeholder="Enter Vehicle Name" class="input-field">
+    <datalist id="suggestion">
+        <option value="Tata Nexon EV">Tata Nexon EV</option>
+        <option value="MG ZS">MG ZS</option>
+        <option value="Hyundai Kona">Hyundai Kona</option>
+    </datalist>
+
+    <input type="number" id="current" placeholder="Current Battery %" min="0" max="100" class="input-field">
+    <input type="number" id="required" placeholder="Required Battery %" min="0" max="100" class="input-field">
+    <button class="calculate-btn" onclick="calculate()">Calculate</button>
+
+    <div class="results">
+      <p id="time"></p>
+      <p id="result"></p>
+       <button id="payBtn" class="button" style="display:none;" onclick="goToPayment()">Proceed to Pay</button> 
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Payment Section -->
+<section id="payment" class="full-section">
+  <div class="estimator-card">
+    <h2>Payment</h2>
+    <p id="payAmount">Please estimate your cost first to generate payment.</p>
+
+    <div id="qrcode"></div>
+
+    <div id="rzp-actions" style="margin-top:12px;">
+      <button id="startPaymentBtn" class="calculate-btn" style="display:none;" onclick="goToPayment()">Pay Now</button>
+    </div>
+
+    <p id="status" style="margin-top:15px; color:#00ff99; white-space:pre-line;"></p>
+  </div>
+</section>
+
+<!-- contact section -->
+<section class="contact-section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Send us a message or visit our charging station.</p>
+  <div class="contact-row">
+    <!-- Google Map -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.50708998765!2d77.0688999!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc0b7d7aa8a7%3A0xe58e2688f40c0537!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1696231191971"
+        width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    EV Charging Station Prototype – Final Year Project
+  </footer>
+
+
+
+
+
+
+ <!-- Razorpay checkout -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<!-- js -->
+<script src="script.js"></script>
+
+</body>
+</html>
